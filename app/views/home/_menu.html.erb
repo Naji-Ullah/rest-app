@@ -1,48 +1,49 @@
-<div class="menu w-[100%] bg-[#000000] text-white">
-    <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
-    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
-
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
-
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img  class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
-
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
-
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
-
-    <div class="menu_item p-[20px] shadow-md shadow-red-300/50">
-        <img class="rounded-[15px] mb-[5px]" src="<%= asset_path('burger.jpg') %>"/>
-        <h5>Zinger Burger</h5>
-        <p>Grilled zinger with fresh onions and spices</p>
-        <h6>RS: 1000 </h6>
-    </div>
+<%= javascript_include_tag('main.js') %>
+<div class="bg-[#000000]">
+ <div class="bg-[#000000] swiper mySwiper w-[80%] mx-auto text-white">
+  <div class="bg-[#000000] swiper-wrapper">
     
-    </div>
-    </div>
+      <div class="swiper-slide white p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('burger.jpg') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">Burgerz</h5>
+        
+      </div>
+
+      <div class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('pizza.jpg') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">PIZZA</h5>
+       
+      </div>
+
+      <div class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('rolls.jpg') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">ROLLS</h5>
+        
+      </div>
+
+      <div class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('pasta.webp') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">PASTA</h5>
+       
+      </div>
+
+      <div class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('burger.jpg') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">CHINESS</h5>
+        
+      </div>
+
+      <div class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        <img src="<%= asset_path('burger.jpg') %>" class="rounded-[15px] mb-2 w-full h-[200px] object-cover" />
+        <h5 class="text-lg font-bold">SOFT DRINKS</h5>
+        
+      </div>
+    
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="swiper-button-next text-red-500"></div>
+  <div class="swiper-button-prev text-[#000000]"></div>
+ </div>
+
 </div>

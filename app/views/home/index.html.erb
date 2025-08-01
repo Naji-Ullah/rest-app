@@ -1,4 +1,5 @@
  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ <%= javascript_include_tag('main.js') %>
  <section class="">
     <div class="slider">
         <div class="slides"> 
@@ -10,9 +11,92 @@
 </section>
 <section>
  <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
-    <div class="title-container flex w-[78%] relative">
-        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">RESTAURNENT MENU</h2>
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">EXPLORE MENU</h2>
+        <%= link_to "VIEW ALL", home_sign_in_path ,class:"self-center" %>
     </div>
  </div>
  <%= render 'home/menu'%>
-</section>  
+
+
+</section> 
+
+<section>
+ <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <div class="menu_item p-[20px] ">
+        <img class="rounded-[15px]" src="<%= asset_path('add1.jpg') %>"/>
+        
+    </div>
+    <div class="menu_item p-[20px] ">
+        <img class="rounded-[15px] " src="<%= asset_path('add3.jpg') %>"/>
+        
+    </div>
+    <div class="menu_item p-[20px]  ">
+        <img class="rounded-[15px] " src="<%= asset_path('add2.jpg') %>"/>
+        
+    </div>
+    
+    
+    </div>
+    </div>
+</div>
+
+
+</section> 
+
+<section>
+ <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center bg-[#000000]">
+    <div class="menu-items-container relative flex justify-center w-[90%] ">
+    <img class="w-[88%] h-[90%] " src="<%= asset_path('mobile.svg') %>"/>
+    <div class="absolute left-[35%] top-[40%] text-[#000000]" >
+    <h3 class="font-[500] sm:text-[2.0rem]">Download Our Mobile App</h3>
+    <p>Elevate your experience by downloading our mobile app for
+        Seamless ordering experience.</p>
+        <div class="flex ">
+        <img class="lg:w-[136px] Lg:h-[44px] " src="<%= asset_path('google.svg') %>"/>
+        <img class="w-[136px] h-[44px] self-end" src="<%= asset_path('apple.svg') %>"/>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+</section>
+
+<section>
+ <div class="tittle w-[100%] relative flex bg-[#000000] text-white font-[600] py-[20px] justify-center">
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-red-500 after:absolute after:bottom-0 after:left-0 after:w-[70%] after:h-[3px] ">Blogs</h2>
+        <%= link_to "VIEW ALL", home_sign_in_path ,class:"self-center text-red-500" %>
+    </div>
+ </div>
+
+  <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <div class="menu_item p-[20px] ">
+        <img class="rounded-[15px]" src="<%= asset_path('slide1.jpg') %>"/>
+        
+    </div>
+    <div class="menu_item p-[20px] ">
+        <img class="rounded-[15px] " src="<%= asset_path('slide2.jpg') %>"/>
+        
+    </div>
+    <div class="menu_item p-[20px]  ">
+        <img class="rounded-[15px] " src="<%= asset_path('slide3.jpg') %>"/>
+        
+    </div>
+    
+    
+    </div>
+    </div>
+</div>
+ 
+ 
+
+
+</section> 
