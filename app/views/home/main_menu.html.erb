@@ -1,0 +1,132 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<div class=" relative pt-[9vh] mb-10px bg-[#000000]">
+ <div class="bg-[#000000] swiper mySwiper w-[80%] mx-auto text-white">
+  <div class=" swiper-wrapper">
+    
+        
+      <a href="#burgerz" class="swiper-slide p-4 rounded shadow text-center cursor-pointer">
+
+        <h5 class="text-lg font-bold">Burgerz</h5>
+        
+      </a>
+      
+
+      <a href="#pizza" class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        
+        <h5 class="text-lg font-bold">PIZZA</h5>
+       
+      </a>
+
+      <a href="#rolls" class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+       
+        <h5 class="text-lg font-bold">ROLLS</h5>
+        
+      </a>
+
+      <a href="#chinese" class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+
+        <h5 class="text-lg font-bold">PASTA</h5>
+       
+      </a>
+
+      <a href="#chinese" class="swiper-slide   p-4 rounded-[15px] shadow shadow-md  text-center cursor-pointer">
+
+        <h5 class="text-lg font-bold">CHINESE</h5>
+        
+      </a>
+
+      <a href="#chinese" class="swiper-slide  p-4 rounded shadow text-center cursor-pointer">
+        
+      <h5 class="text-lg font-bold">SOFT DRINKS</h5>
+        
+      </a>
+
+    
+  </div>
+
+  <!-- Navigation buttons -->
+  <div class="swiper-button-next "></div>
+  <div class="swiper-button-prev "></div>
+ </div>
+
+<section class="starter">
+ <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">Starter</h2>
+        <%= link_to "VIEW ALL", home_main_menu_path ,class:"self-center" %>
+    </div>
+ </div>
+ <div class="menu w-[100%]  bg-[#000000] text-white">
+    <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3  gap-5">
+    <% require 'json' %>
+    <% @menu_items.each do |item| %>
+        <%= render 'home/food_item' , item:item %>
+    <% end %>
+    </div>
+    </div>
+</div>
+</section>
+
+<section id="rolls" class="rolls">
+ <div class="title w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">Rolls</h2>
+        <%= link_to "VIEW ALL", home_main_menu_path ,class:"self-center" %>
+    </div>
+ </div>
+ <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <% require 'json' %>
+    <% @menu_items.each do |item| %>
+        <%= render 'home/food_item' , item:item %>
+    <% end %>
+    </div>
+    </div>
+</div>
+</section>
+
+<section id="pizza" class="Pizza">
+ <div class="title w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">Pizza</h2>
+        
+    </div>
+ </div>
+ <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <% require 'json' %>
+    <% @menu_items.each do |item| %>
+        <%= render 'home/food_item' , item:item %>
+    <% end %>
+    
+    </div>
+    </div>
+</div>
+</section>
+
+
+<section id="chinese" class="Chinese">
+ <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
+    <div class="title-container flex  w-[78%] relative justify-between">
+        <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">Chinese</h2>
+        
+    </div>
+ </div>
+ <div class="menu w-[100%] bg-[#000000] text-white">
+    <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
+    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <% require 'json' %>
+    <% @menu_items.each do |item| %>
+        <%= render 'home/food_item' , item: item %>
+    <% end %>
+    </div>
+    </div>
+</div>
+</section>
+
+
+
+</div>

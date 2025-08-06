@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("turbo:load", function () {
   const toggleBtn = document.getElementById("toggleBtn");
   const navbar = document.getElementById("navbar");
 
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("turbo:load", function () {
   new Swiper(".mySwiper", {
     slidesPerView: 4,
     spaceBetween: 20,

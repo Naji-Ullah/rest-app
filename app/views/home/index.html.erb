@@ -13,7 +13,7 @@
  <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
     <div class="title-container flex  w-[78%] relative justify-between">
         <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">EXPLORE MENU</h2>
-        <%= link_to "VIEW ALL", home_sign_in_path ,class:"self-center" %>
+        <%= link_to "VIEW ALL", home_main_menu_path , class:"self-center" %>
     </div>
  </div>
  <%= render 'home/menu'%>
@@ -49,20 +49,20 @@
 <section>
  <div class="menu w-[100%] bg-[#000000] text-white">
     <div class="menu-container flex justify-center bg-[#000000]">
-    <div class="menu-items-container relative flex justify-center w-[90%] ">
-    <img class="w-[88%] h-[90%] " src="<%= asset_path('mobile.svg') %>"/>
-    <div class="absolute left-[35%] top-[40%] text-[#000000]" >
-    <h3 class="font-[500] sm:text-[2.0rem]">Download Our Mobile App</h3>
-    <p>Elevate your experience by downloading our mobile app for
+    <div class="menu-items-container md:w-[80%]  relative flex justify-center  ">
+    <img class="flex relative w-[100%] h-[95%] " src="<%= asset_path('mobile.svg') %>"/>
+    <div class="absolute left-[30%] top-[40%] text-[#000000]" >
+    <h3 class="font-[500] text-[0.5rem] md:text-[2.0rem]">Download Our Mobile App</h3>
+    <p class="font-[500]  text-[0.45rem] md:text-[2.0rem]">Elevate your experience by downloading <br/> our mobile app  for
         Seamless ordering experience.</p>
         <div class="flex ">
-        <img class="lg:w-[136px] Lg:h-[44px] " src="<%= asset_path('google.svg') %>"/>
-        <img class="w-[136px] h-[44px] self-end" src="<%= asset_path('apple.svg') %>"/>
+        <img class="w-[60px] h-[20px] md:w-[136px] md:h-[44px] " src="<%= asset_path('google.svg') %>"/>
+        <img class="w-[60px] h-[20px] md:w-[136px] md:h-[44px]  self-end" src="<%= asset_path('apple.svg') %>"/>
         </div>
         </div>
     </div>
     </div>
-</div>
+ </div>
 
 
 </section>
@@ -75,21 +75,28 @@
     </div>
  </div>
 
-  <div class="menu w-[100%] bg-[#000000] text-white">
-    <div class="menu-container flex justify-center bg-[#000000]">
-    <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
-    <div class="menu_item p-[20px] ">
+  <div class="relative menu w-[100%] bg-[#000000] text-white pb-[1%]">
+    <div class="relative  menu-container flex justify-center bg-[#000000]">
+    <div class="relative  menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
+    <div class="menu_item  p-[20px] relative">
         <img class="rounded-[15px]" src="<%= asset_path('slide1.jpg') %>"/>
-        
+        <div class="flex absolute w-[80%] top-[80%] bg-[#808080] opacity-[0.75]">
+        <p class=" text-[#000000] bg-[#808080] text-[1.25rem] sm:text-[1.15rem] font-[700]">Secret to our recipe<p>
+        </div>
     </div>
-    <div class="menu_item p-[20px] ">
+    <div class="menu_item  p-[20px]  relative">
         <img class="rounded-[15px] " src="<%= asset_path('slide2.jpg') %>"/>
-        
+        <div class="flex absolute w-[80%] top-[80%] bg-[#808080] opacity-[0.75]">
+        <p class=" text-[#000000] bg-[#808080] text-[1.25rem] font-[700]"> Sucess of BURGERJEE! <p>
+        </div>
     </div>
-    <div class="menu_item p-[20px]  ">
+    
+    <div class="menu_item  p-[20px] relative flex ">
         <img class="rounded-[15px] " src="<%= asset_path('slide3.jpg') %>"/>
-        
-    </div>
+        <div class="flex absolute w-[80%] top-[80%] bg-[#808080] opacity-[0.75]">
+        <p class="   text-[#000000] bg-[#808080] text-[1.25rem] font-[700]">BURGERJEE! the brand<p>
+        </div>
+        </div>
     
     
     </div>
@@ -98,5 +105,6 @@
  
  
 
-
 </section> 
+
+<%= link_to "Order Now",home_main_menu_path, class:"fixed text-white right-[2%] top-[86%] flex justify-center items-center w-[110px] h-[40px] rounded-[8px] z-101 bg-red-500  font-[600] "   %>

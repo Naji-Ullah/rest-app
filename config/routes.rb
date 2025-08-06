@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   get "home/sign_in"
   get "home/about"
   get "home/sign_up"
+  get "home/main_menu"
   root "home#index"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
