@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="bg-white p-8 rounded shadow-md w-full max-w-md">
+    <h1 class="text-2xl font-bold mb-6 text-center">Dashboard</h1>
+    <div id="error" class="text-red-500 mb-4 hidden"></div>
+    <div id="user-info" class="space-y-2"></div>
+    <button id="logout" class="w-full bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 mt-4">Logout</button>
+  </div>
+  <script>
+    const token = localStorage.getItem('token');
+    if (!token) {
+      window.location.href = '/login';
+    }
+
+    async function fetchDashboard() {
+      const errorDiv = document.getElementById('error');
+      const userInfoDiv = document.getElementById('user-info');
+      try {
+        const response = await fetch('/api/v1/dashboard', {
+          headers: { 'Authorization': `Bearer ${token}` }
+        });
+        const result = await response.json();
+        if (response.ok) {
+          userInfoDiv.innerHTML = `
+            <p><strong>Email:</strong> ${result.email}</p>
+            <p><strong>Name:</strong> ${result.name}</p>
+            <p><strong>Address:</strong> ${result.address || 'Not provided'}</p>
+            <p><strong>Role:</strong> ${result.role}</p>
+          `;
+        } else {
+          errorDiv.textContent = result.error || 'Failed to load dashboard';
+          errorDiv.classList.remove('hidden');
+          localStorage.removeItem('token');
+          setTimeout(() => window.location.href = '/login', 2000);
+        }
+      } catch (err) {
+        errorDiv.textContent = 'Network error';
+        errorDiv.classList.remove('hidden');
+        localStorage.removeItem('token');
+        setTimeout(() => window.location.href = '/login', 2000);
+      }
+    }
+
+    document.getElementById('logout').addEventListener('click', () => {
+      localStorage.removeItem('token');
+      window.location.href = '/login';
+    });
+
+    fetchDashboard();
+  </script>
+</body>
+</html>
