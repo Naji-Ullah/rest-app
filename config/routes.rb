@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  #get "home/index"
+  get "home/sign_in"
+  get "home/about"
+  get "home/sign_up"
+  get "home/main_menu"
+  root "home#index"
+
   namespace :api do
     namespace :v1 do
       post "login", to: "sessions#create"

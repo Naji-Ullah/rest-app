@@ -1,0 +1,19 @@
+<%= javascript_include_tag('main.js') %>
+<div class="box-border navbar fixed sm:flex justify-center w-[100%]  bg-[#000000] border-b-[2px] border-red-500 z-100">
+    <div class='navbar-container flex items-center w-[80%] h-[8vh] justify-between'>
+    <div class="navbar-logo w-[50%] lg:w-[20%]">
+        <hi class=" font-bold text-[2rem] text-red-500 ml-[10%]"><%= link_to "BURGERJEE", root_path %></hi>
+
+    </div>
+    <button id="toggleBtn" class="menu-icon fixed right-[20px] sm:invisible "><img src="<%= asset_path('icons/menu.png') %>"></button>
+    <div  id="navbar" class="navbarItems flex bg-[#000000] justify-center fixed top-[8vh] w-[100%] sm:visible sm:static sm:flex sm:justify-between sm:w-[70%] sm:max-h-8vh">
+    <ul class="  flex fixed flex-col  w-[100%] h-[80vh] gap-[5%] bg-[#000000] items-center font-[500] text-[1.2rem] sm:flex sm:flex-row sm:justify-between sm:w-[100%] sm:static sm:h-0 sm:w-0">
+    <li class="relative"><%= link_to "Home", root_path, class:" text-white hover:text-red-500 after:content-[''] after:absolute after:w-full after:h-[2px] after:text-red-500 after:bg-red-500 after:left-0 after:top-full " %></li>
+    <li class='relative'><%= link_to "Delivery", root_path, class:" flex text-white hover:text-red-100  after:content-[''] after:absolute after:w-full after:h-[2px] after:text-red-500 after:bg-red-100 after:left-0 after:top-full" %></li>
+    <li class='relative'><%= link_to "About Us", home_about_path, class:"flex text-white hover:text-red-200  after:content-[''] after:absolute after:w-full after:h-[2px] after:text-red-500 after:bg-red-200 after:left-0 after:top-full" %></li>
+    <li class='relative'><%= link_to "Sign In", login_path, class:"flex text-white hover:text-red-300 after:content-[''] after:absolute after:w-full after:h-[2px] after:text-red-500 after:bg-red-300 after:left-0 after:top-full" %></li>
+    </ul>
+    </div>
+    </div>
+
+</div>

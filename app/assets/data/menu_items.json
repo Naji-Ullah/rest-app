@@ -1,0 +1,32 @@
+[
+  {
+    "img": "burger.jpg",
+    "title": "Zinger Burger",
+    "desc": "Grilled zinger with onions",
+    "price": 1000
+  },
+  {
+    "img": "cheeseburger.jpg",
+    "title": "Chicken Burger",
+    "desc": "Fried chicken with tomatoes and onions",
+    "price": 1000
+  },
+  {
+    "img": "cheeseburger.jpg",
+    "title": "Fish Burger",
+    "desc": "Beef patty with cheese",
+    "price": 1250
+  },
+  {
+    "img": "cheeseburger.jpg",
+    "title": "Chicken cheese Burger",
+    "desc": "Chicken patty with cheese",
+    "price": 1299
+  },
+  {
+    "img": "cheeseburger.jpg",
+    "title": "Fish Burger",
+    "desc": "Fish patty with cheese",
+    "price": 1320
+  }
+]

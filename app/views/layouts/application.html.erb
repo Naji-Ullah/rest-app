@@ -20,11 +20,16 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" %>
   </head>
 
   <body>
-    <%= render 'home/header' %>
+    <%= render 'home/header' ,class:"relative top-0"%>
     <%= yield %>
     <%= render 'home/footer' %>
+
+
+    
   </body>
 </html>
