@@ -22,7 +22,6 @@ default: &default
   password: my_secure_password
   host: db
 
-
 development:
   <<: *default
   database: myapp_db
