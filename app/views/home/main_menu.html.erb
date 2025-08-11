@@ -49,6 +49,7 @@
   <div class="swiper-button-prev "></div>
  </div>
 
+
 <section class="starter">
  <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
     <div class="title-container flex  w-[78%] relative justify-between">
@@ -60,7 +61,7 @@
     <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
     <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3  gap-5">
     <% require 'json' %>
-    <% @menu_items.each do |item| %>
+    <% @food_item.all.each do |item| %>
         <%= render 'home/food_item' , item:item %>
     <% end %>
     </div>
@@ -79,9 +80,9 @@
     <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
     <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
     <% require 'json' %>
-    <% @menu_items.each do |item| %>
-        <%= render 'home/food_item' , item:item %>
-    <% end %>
+    <% @food_item.each do |item| %>
+         <%= render 'home/food_item' , item:item %>
+   <% end %>
     </div>
     </div>
 </div>
