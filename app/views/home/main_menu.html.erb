@@ -76,16 +76,18 @@
         <%= link_to "VIEW ALL", home_main_menu_path ,class:"self-center" %>
     </div>
  </div>
+ 
  <div class="menu w-[100%] bg-[#000000] text-white">
     <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
     <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
-    <% require 'json' %>
+   <% require 'json' %>
     <% @food_item.each do |item| %>
          <%= render 'home/food_item' , item:item %>
    <% end %>
     </div>
     </div>
 </div>
+
 </section>
 
 <section id="pizza" class="Pizza">
@@ -99,7 +101,7 @@
     <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
     <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
     <% require 'json' %>
-    <% @menu_items.each do |item| %>
+    <% @food_item.each do |item| %>
         <%= render 'home/food_item' , item:item %>
     <% end %>
     
@@ -110,7 +112,7 @@
 
 
 <section id="chinese" class="Chinese">
- <div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
+<div class="tittle w-[100%] relative flex bg-[#000000] text-red-500 font-[600] py-[20px] justify-center">
     <div class="title-container flex  w-[78%] relative justify-between">
         <h2 class="text-[1.75rem] relative after:content-['']  after:bg-[#ffffff] after:absolute after:bottom-0 after:left-0 after:w-[50%] after:h-[3px] ">Chinese</h2>
         
@@ -120,14 +122,13 @@
     <div class="menu-container flex justify-center pb-[50px] bg-[#000000]">
     <div class="menu-items-container sm:w-[80%] grid sm:grid-cols-3 gap-5">
     <% require 'json' %>
-    <% @menu_items.each do |item| %>
+    <% @food_item.each do |item| %>
         <%= render 'home/food_item' , item: item %>
     <% end %>
     </div>
     </div>
 </div>
 </section>
-
 
 
 </div>
