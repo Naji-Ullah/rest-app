@@ -11,4 +11,7 @@ class HomeController < ApplicationController
     @menu_items = JSON.parse(File.read("app/assets/data/menu_items.json"))
     @food_item = FoodItem.all
   end
+  def food_cart 
+  end
+    
 end

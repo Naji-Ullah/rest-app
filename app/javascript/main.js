@@ -1,4 +1,4 @@
-document.addEventListener("tDOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("toggleBtn");
   const navbar = document.getElementById("navbar");
 

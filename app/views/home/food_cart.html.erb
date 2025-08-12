@@ -1,0 +1,22 @@
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+ <section class=" ">
+    <div class="about-us relative  w-[100%] h-[95vh] bg-[#000000] text-white flex justify-center items-center">
+        <div class="about-us-container relative flex flex-col items-center w-[80%] ">
+            <div class="title-container text-[2.75rem] font-[600] my-[3%] text-white">
+                <h2 class="relative after:content-['']  after:bg-red-500 after:absolute after:bottom-0 after:right-0 after:w-[100%] after:h-[3px] ">Your <span class='text-red-500  '>BURGERJEE</span> CART <img class="inline-block w-[70px] h-[70px]" src="<%= asset_path("icons/foodCart.png") %>"></h2>
+            </div>
+            <div class="about-us-text flex flex-col w-100% lg:w-[60%]   lg:text-[1.25rem] sm:leading-[50px] ">
+                <h5 class="font-[500]">Your selected item: ZINGER BURGER<%= %></h5>
+        <p class="font-[100] text-[#8b8b8b]"> Quantity: 3<%=  %></p>
+        <h6 class="text-red-600 font-[600] mb-[5px]">RS:  1000</h6>
+        <h6 class="text-white font-[600] mb-[5px]">Total cost = 3x1000</h6>
+        <h6 class="text-white font-[600] mb-[5px]">Delivery Address</h6>
+        <input type="text" id="address" class="w-full border p-2 rounded">
+        <button class="cursor-pointer text-center h-[50px] bg-white text-red-700 rounded-[10px] font-[700] hover:bg-red-400 hover:text-black"  >Confirm Order</button>
+
+
+            </div>
+        </div>
+    </div>
+
+<section/>

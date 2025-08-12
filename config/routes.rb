@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get "home/about"
   get "home/sign_up"
   get "home/main_menu"
+  get "home/food_cart"
   root "home#index"
 
   namespace :api do
