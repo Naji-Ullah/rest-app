@@ -9,5 +9,5 @@
         <h5 class="font-[500]"><%= item["title"]%></h5>
         <p class="font-[100] text-[#8b8b8b]"><%= item["desc"] %></p>
         <h6 class="text-red-600 font-[600] mb-[5px]">RS: <%= item["price"]  %> </h6>
-        <button class="cursor-pointer text-center h-[50px] bg-white text-red-700 rounded-[10px] font-[700] hover:bg-red-400 hover:text-black"  >+ ADD TO CART</button>
+        <%= link_to "+ ADD TO CART" , home_food_cart_path(id:item["id"]) , class:"cursor-pointer flex justify-center items-center h-[50px] bg-white text-red-700 rounded-[10px] font-[700] hover:bg-red-400 hover:text-black"   %>
     </div>

@@ -12,6 +12,7 @@ class HomeController < ApplicationController
     @food_item = FoodItem.all
   end
   def food_cart 
+    @food_item = FoodItem.find(params[:id])
   end
     
 end
